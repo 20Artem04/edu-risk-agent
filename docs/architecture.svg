@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#14254a"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-opacity=".22"/></filter>
+  <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#67e8f9"/></marker>
+  <style>.title{font:700 34px Arial,sans-serif;fill:white}.sub{font:16px Arial,sans-serif;fill:#9fb4d4}.h{font:700 19px Arial,sans-serif;fill:#0f172a}.t{font:14px Arial,sans-serif;fill:#475569}.white{fill:white}.tag{font:700 12px Arial,sans-serif;fill:#0369a1;letter-spacing:1px}.line{stroke:#67e8f9;stroke-width:3;fill:none;marker-end:url(#arrow)}.small{font:13px Arial,sans-serif;fill:#cbd5e1}</style>
+</defs>
+<rect width="1400" height="820" rx="28" fill="url(#bg)"/>
+<text x="60" y="64" class="title">Академический навигатор · архитектура данных</text>
+<text x="60" y="94" class="sub">Воспроизводимый контур: три источника → ETL → признаки → модель → инструменты → интерфейс</text>
+
+<!-- sources -->
+<text x="60" y="150" class="tag">01 · ИСТОЧНИКИ</text>
+<g filter="url(#shadow)"><rect x="60" y="175" width="245" height="112" rx="18" fill="white"/><circle cx="95" cy="211" r="16" fill="#dbeafe"/><text x="125" y="216" class="h">Деканат</text><text x="86" y="247" class="t">студенты · курсы · оценки</text><text x="86" y="270" class="t">CSV · версионные записи</text></g>
+<g filter="url(#shadow)"><rect x="60" y="309" width="245" height="112" rx="18" fill="white"/><circle cx="95" cy="345" r="16" fill="#cffafe"/><text x="125" y="350" class="h">LMS</text><text x="86" y="381" class="t">44 178 событий после очистки</text><text x="86" y="404" class="t">JSONL · цифровой след</text></g>
+<g filter="url(#shadow)"><rect x="60" y="443" width="245" height="112" rx="18" fill="white"/><circle cx="95" cy="479" r="16" fill="#fef3c7"/><text x="125" y="484" class="h">Контроль доступа</text><text x="86" y="515" class="t">30 228 отметок</text><text x="86" y="538" class="t">CSV ; · посещаемость</text></g>
+
+<!-- etl -->
+<text x="385" y="150" class="tag">02 · ИНТЕГРАЦИЯ</text>
+<g filter="url(#shadow)"><rect x="385" y="175" width="270" height="220" rx="20" fill="white"/><rect x="385" y="175" width="270" height="51" rx="20" fill="url(#blue)"/><rect x="385" y="207" width="270" height="19" fill="url(#blue)"/><text x="413" y="208" style="font:700 19px Arial;fill:white">ETL и качество</text><text x="413" y="261" class="t">✓ нормализация категорий</text><text x="413" y="290" class="t">✓ удаление дубликатов</text><text x="413" y="319" class="t">✓ импутация аномалий</text><text x="413" y="348" class="t">✓ ссылочная целостность</text><text x="413" y="377" class="t">✓ журнал 15 проверок</text></g>
+<g filter="url(#shadow)"><rect x="385" y="423" width="270" height="132" rx="20" fill="white"/><text x="413" y="463" class="h">SQLite · education.db</text><text x="413" y="492" class="t">10 нормализованных таблиц</text><text x="413" y="519" class="t">PK/FK · CHECK · индексы</text><text x="413" y="543" class="t">журнал запросов и прогнозов</text></g>
+
+<!-- analytics -->
+<text x="735" y="150" class="tag">03 · АНАЛИТИКА</text>
+<g filter="url(#shadow)"><rect x="735" y="175" width="270" height="147" rx="20" fill="white"/><text x="763" y="216" class="h">Feature engineering</text><text x="763" y="247" class="t">14 ранних индикаторов</text><text x="763" y="275" class="t">без итоговых оценок</text><text x="763" y="301" class="t">TF-IDF · 19 текстовых фрагментов</text></g>
+<g filter="url(#shadow)"><rect x="735" y="345" width="270" height="210" rx="20" fill="white"/><rect x="735" y="345" width="8" height="210" rx="4" fill="#2563eb"/><text x="763" y="387" class="h">Random Forest</text><text x="763" y="418" class="t">GridSearchCV · 4-fold</text><text x="763" y="447" class="t">F1 = 0,877</text><text x="763" y="476" class="t">ROC-AUC = 0,954</text><text x="763" y="505" class="t">порог = 0,44</text><text x="763" y="535" class="t">permutation importance</text></g>
+
+<!-- agent/ui -->
+<text x="1085" y="150" class="tag">04 · ПРОДУКТ</text>
+<g filter="url(#shadow)"><rect x="1085" y="175" width="255" height="177" rx="20" fill="white"/><text x="1113" y="216" class="h">Агент + инструменты</text><text x="1113" y="247" class="t">маршрутизация намерений</text><text x="1113" y="276" class="t">параметризованный SQL</text><text x="1113" y="305" class="t">RBAC: 3 роли</text><text x="1113" y="334" class="t">Ollama / fallback</text></g>
+<g filter="url(#shadow)"><rect x="1085" y="378" width="255" height="177" rx="20" fill="white"/><text x="1113" y="419" class="h">Streamlit</text><text x="1113" y="450" class="t">чат · карточка студента</text><text x="1113" y="479" class="t">дашборд · качество модели</text><text x="1113" y="508" class="t">качество данных · журналы</text><text x="1113" y="537" class="t">human-in-the-loop</text></g>
+
+<path d="M305 365 C340 365 350 285 385 285" class="line"/><path d="M655 285 H735" class="line"/><path d="M870 322 V345" class="line"/><path d="M1005 450 H1085" class="line"/><path d="M520 395 V423" class="line"/><path d="M655 490 C694 490 696 250 735 250" class="line"/>
+
+<rect x="60" y="625" width="1280" height="130" rx="20" fill="#0f203c" stroke="#29436b"/>
+<text x="88" y="660" style="font:700 17px Arial;fill:#67e8f9">СКВОЗНЫЕ ГАРАНТИИ</text>
+<text x="88" y="697" class="small">Воспроизводимость: seed 42 · сохранённые разбиения · единый pipeline</text>
+<text x="497" y="697" class="small">Безопасность: LLM не формирует SQL · ролевой доступ · параметры</text>
+<text x="946" y="697" class="small">Этика: синтетические данные · поддержка, не санкции</text>
+<text x="88" y="729" class="small">Наблюдаемость: data_quality_log · model_runs · predictions · query_logs</text>
+<text x="497" y="729" class="small">Контроль утечки: итоговые оценки только в целевой переменной</text>
+<text x="946" y="729" class="small">Развёртывание: локально, без платного API</text>
+</svg>

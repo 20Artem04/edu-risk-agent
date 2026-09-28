@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040">
+<defs>
+ <filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity=".13"/></filter>
+ <marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#64748b"/></marker>
+ <style>.title{font:700 34px Arial;fill:#0f172a}.sub{font:16px Arial;fill:#64748b}.box{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}.head{fill:#172554}.head2{fill:#164e63}.name{font:700 18px Arial;fill:#fff}.field{font:14px monospace;fill:#334155}.pk{fill:#2563eb;font-weight:700}.fk{fill:#0f766e;font-weight:700}.rel{fill:none;stroke:#64748b;stroke-width:2;marker-end:url(#a)}.label{font:12px Arial;fill:#475569}.section{font:700 12px Arial;fill:#2563eb;letter-spacing:1.6px}</style>
+</defs>
+<rect width="1600" height="1040" fill="#f8fafc"/>
+<text x="50" y="58" class="title">ER-диаграмма · education.db</text><text x="50" y="87" class="sub">Нормализованная схема хранения, признаки, версии модели и журнал использования</text>
+<text x="50" y="126" class="section">СПРАВОЧНИКИ И УЧЕБНЫЕ ДАННЫЕ</text>
+
+<!-- groups -->
+<g filter="url(#s)"><rect x="50" y="150" width="280" height="185" rx="13" class="box"/><path d="M50 163Q50 150 63 150H317Q330 150 330 163V196H50Z" class="head"/><text x="72" y="181" class="name">student_groups</text><text x="72" y="225" class="field pk">PK group_id</text><text x="72" y="252" class="field">group_name UNIQUE</text><text x="72" y="279" class="field">program_code</text><text x="72" y="306" class="field">study_year</text></g>
+<!-- students -->
+<g filter="url(#s)"><rect x="405" y="150" width="305" height="265" rx="13" class="box"/><path d="M405 163Q405 150 418 150H697Q710 150 710 163V196H405Z" class="head"/><text x="427" y="181" class="name">students</text><text x="427" y="225" class="field pk">PK student_id</text><text x="427" y="252" class="field">full_name</text><text x="427" y="279" class="field fk">FK group_id</text><text x="427" y="306" class="field">gender · age</text><text x="427" y="333" class="field">admission_score</text><text x="427" y="360" class="field">previous_gpa</text><text x="427" y="387" class="field">scholarship</text></g>
+<!-- courses -->
+<g filter="url(#s)"><rect x="785" y="150" width="280" height="158" rx="13" class="box"/><path d="M785 163Q785 150 798 150H1052Q1065 150 1065 163V196H785Z" class="head"/><text x="807" y="181" class="name">courses</text><text x="807" y="225" class="field pk">PK course_code</text><text x="807" y="252" class="field">course_name</text><text x="807" y="279" class="field">credits</text></g>
+<!-- enrollments -->
+<g filter="url(#s)"><rect x="1140" y="150" width="395" height="292" rx="13" class="box"/><path d="M1140 163Q1140 150 1153 150H1522Q1535 150 1535 163V196H1140Z" class="head"/><text x="1162" y="181" class="name">enrollments</text><text x="1162" y="225" class="field pk">PK enrollment_id</text><text x="1162" y="252" class="field fk">FK student_id · course_code</text><text x="1162" y="279" class="field">semester</text><text x="1162" y="306" class="field">midterm_score</text><text x="1162" y="333" class="field">assignment_score</text><text x="1162" y="360" class="field">final_score · final_grade</text><text x="1162" y="387" class="field">attempt_count</text><text x="1162" y="416" class="field">UQ student/course/semester</text></g>
+
+<!-- events -->
+<g filter="url(#s)"><rect x="50" y="505" width="350" height="238" rx="13" class="box"/><path d="M50 518Q50 505 63 505H387Q400 505 400 518V551H50Z" class="head2"/><text x="72" y="536" class="name">lms_events</text><text x="72" y="580" class="field pk">PK event_id</text><text x="72" y="607" class="field fk">FK student_id · course_code</text><text x="72" y="634" class="field">event_ts · event_type</text><text x="72" y="661" class="field">duration_minutes</text><text x="72" y="688" class="field">on_time</text></g>
+<!-- attendance -->
+<g filter="url(#s)"><rect x="455" y="505" width="330" height="238" rx="13" class="box"/><path d="M455 518Q455 505 468 505H772Q785 505 785 518V551H455Z" class="head2"/><text x="477" y="536" class="name">attendance</text><text x="477" y="580" class="field pk">PK attendance_id</text><text x="477" y="607" class="field fk">FK student_id · course_code</text><text x="477" y="634" class="field">lesson_date</text><text x="477" y="661" class="field">present · late</text><text x="477" y="699" class="field">UQ student/course/date</text></g>
+<!-- features -->
+<g filter="url(#s)"><rect x="840" y="505" width="330" height="292" rx="13" class="box"/><path d="M840 518Q840 505 853 505H1157Q1170 505 1170 518V551H840Z" class="head"/><text x="862" y="536" class="name">student_features</text><text x="862" y="580" class="field pk">PK/FK student_id</text><text x="862" y="607" class="field">semester</text><text x="862" y="634" class="field">14 ранних признаков</text><text x="862" y="661" class="field">at_risk (цель)</text><text x="862" y="688" class="field">failed_courses</text><text x="862" y="715" class="field">final_gpa</text><text x="862" y="757" class="label">Итоговые поля не входят в X</text></g>
+<!-- predictions -->
+<g filter="url(#s)"><rect x="1225" y="505" width="310" height="292" rx="13" class="box"/><path d="M1225 518Q1225 505 1238 505H1522Q1535 505 1535 518V551H1225Z" class="head"/><text x="1247" y="536" class="name">predictions</text><text x="1247" y="580" class="field pk">PK prediction_id</text><text x="1247" y="607" class="field fk">FK student_id</text><text x="1247" y="634" class="field fk">FK model_run_id</text><text x="1247" y="661" class="field">risk_probability</text><text x="1247" y="688" class="field">risk_level</text><text x="1247" y="715" class="field">top_factors JSON</text><text x="1247" y="742" class="field">created_at</text></g>
+
+<!-- operations -->
+<text x="50" y="850" class="section">НАБЛЮДАЕМОСТЬ И ВЕРСИОНИРОВАНИЕ</text>
+<g filter="url(#s)"><rect x="50" y="875" width="350" height="120" rx="13" class="box"/><path d="M50 888Q50 875 63 875H387Q400 875 400 888V921H50Z" class="head2"/><text x="72" y="906" class="name">data_quality_log</text><text x="72" y="950" class="field">source · check · affected · action</text><text x="72" y="977" class="field">checked_at</text></g>
+<g filter="url(#s)"><rect x="525" y="875" width="420" height="120" rx="13" class="box"/><path d="M525 888Q525 875 538 875H932Q945 875 945 888V921H525Z" class="head2"/><text x="547" y="906" class="name">model_runs</text><text x="547" y="950" class="field pk">PK model_run_id · algorithm · threshold</text><text x="547" y="977" class="field">test metrics · artifact_path · created_at</text></g>
+<g filter="url(#s)"><rect x="1070" y="875" width="465" height="120" rx="13" class="box"/><path d="M1070 888Q1070 875 1083 875H1522Q1535 875 1535 888V921H1070Z" class="head2"/><text x="1092" y="906" class="name">query_logs</text><text x="1092" y="950" class="field">role · intent · latency · status · llm_used</text><text x="1092" y="977" class="field">session_id · query_text (≤500) · created_at</text></g>
+
+<!-- relationships -->
+<path d="M330 243H405" class="rel"/><text x="352" y="233" class="label">1:N</text>
+<path d="M710 260C920 260 930 250 1140 250" class="rel"/><text x="904" y="244" class="label">1:N</text>
+<path d="M1065 275C1100 275 1105 300 1140 300" class="rel"/><text x="1082" y="268" class="label">1:N</text>
+<path d="M558 415V470H225V505" class="rel"/><text x="357" y="463" class="label">1:N</text>
+<path d="M600 415V475H620V505" class="rel"/><text x="610" y="463" class="label">1:N</text>
+<path d="M690 370C780 370 800 635 840 635" class="rel"/><text x="767" y="491" class="label">1:1</text>
+<path d="M710 345C1010 345 1060 640 1225 640" class="rel"/><text x="1023" y="467" class="label">1:N</text>
+<path d="M945 934C1100 934 1095 700 1225 700" class="rel"/><text x="1090" y="819" class="label">1:N</text>
+</svg>

@@ -1,0 +1,229 @@
+{
+  "created_at": "2026-09-28T19:21:22.484408+00:00",
+  "model_run_id": "run_20260928_192122",
+  "dataset": {
+    "rows": 420,
+    "features": 14,
+    "risk_rate": 0.3452,
+    "train_rows": 252,
+    "validation_rows": 84,
+    "test_rows": 84,
+    "seed": 42
+  },
+  "validation": {
+    "DummyClassifier": {
+      "accuracy": 0.6548,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.3452,
+      "brier": 0.226,
+      "confusion_matrix": [
+        [
+          55,
+          0
+        ],
+        [
+          29,
+          0
+        ]
+      ]
+    },
+    "LogisticRegression": {
+      "accuracy": 0.8929,
+      "precision": 0.8125,
+      "recall": 0.8966,
+      "f1": 0.8525,
+      "roc_auc": 0.9699,
+      "average_precision": 0.9556,
+      "brier": 0.0694,
+      "confusion_matrix": [
+        [
+          49,
+          6
+        ],
+        [
+          3,
+          26
+        ]
+      ]
+    },
+    "RandomForest(GridSearchCV)": {
+      "accuracy": 0.9048,
+      "precision": 0.8621,
+      "recall": 0.8621,
+      "f1": 0.8621,
+      "roc_auc": 0.9755,
+      "average_precision": 0.9583,
+      "brier": 0.0645,
+      "confusion_matrix": [
+        [
+          51,
+          4
+        ],
+        [
+          4,
+          25
+        ]
+      ]
+    }
+  },
+  "random_forest_search": {
+    "best_params": {
+      "model__max_depth": 4,
+      "model__max_features": "sqrt",
+      "model__min_samples_leaf": 5
+    },
+    "best_cv_f1": 0.8833,
+    "combinations": 12,
+    "cv_folds": 4
+  },
+  "selected_model": "RandomForest(GridSearchCV)",
+  "selection_rule": "максимальный F1 на validation, ROC-AUC как дополнительный критерий",
+  "threshold": 0.44,
+  "validation_f1_at_selected_threshold": 0.8852,
+  "test": {
+    "accuracy": 0.9167,
+    "precision": 0.8929,
+    "recall": 0.8621,
+    "f1": 0.8772,
+    "roc_auc": 0.9542,
+    "average_precision": 0.9341,
+    "brier": 0.0768,
+    "confusion_matrix": [
+      [
+        52,
+        3
+      ],
+      [
+        4,
+        25
+      ]
+    ]
+  },
+  "roc_curve": {
+    "fpr": [
+      0.0,
+      0.0,
+      0.0,
+      0.018182,
+      0.018182,
+      0.054545,
+      0.054545,
+      0.145455,
+      0.145455,
+      0.272727,
+      0.272727,
+      0.472727,
+      0.472727,
+      0.872727,
+      0.909091,
+      1.0
+    ],
+    "tpr": [
+      0.0,
+      0.034483,
+      0.655172,
+      0.655172,
+      0.689655,
+      0.689655,
+      0.862069,
+      0.862069,
+      0.931034,
+      0.931034,
+      0.965517,
+      0.965517,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "feature_importance": [
+    {
+      "feature": "assignment_avg",
+      "label_ru": "Средний балл заданий",
+      "importance": 0.4516861316645712,
+      "risk_direction": -1
+    },
+    {
+      "feature": "attempts_avg",
+      "label_ru": "Среднее число попыток сдачи",
+      "importance": 0.23178297757188107,
+      "risk_direction": 1
+    },
+    {
+      "feature": "quiz_attempts_per_course",
+      "label_ru": "Попытки тестов на дисциплину",
+      "importance": 0.16555926969420076,
+      "risk_direction": -1
+    },
+    {
+      "feature": "previous_gpa",
+      "label_ru": "Средний балл прошлых семестров",
+      "importance": 0.11553612825760577,
+      "risk_direction": -1
+    },
+    {
+      "feature": "midterm_avg",
+      "label_ru": "Средний балл промежуточного контроля",
+      "importance": 0.018879565842321165,
+      "risk_direction": -1
+    },
+    {
+      "feature": "admission_score",
+      "label_ru": "Вступительный балл",
+      "importance": 0.016555926969420074,
+      "risk_direction": -1
+    },
+    {
+      "feature": "active_days",
+      "label_ru": "Активные дни в LMS",
+      "importance": 0.0,
+      "risk_direction": -1
+    },
+    {
+      "feature": "lms_events_per_course",
+      "label_ru": "События LMS на дисциплину",
+      "importance": 0.0,
+      "risk_direction": -1
+    },
+    {
+      "feature": "late_rate",
+      "label_ru": "Доля опозданий",
+      "importance": 0.0,
+      "risk_direction": -1
+    },
+    {
+      "feature": "attendance_rate",
+      "label_ru": "Доля посещённых занятий",
+      "importance": 0.0,
+      "risk_direction": -1
+    },
+    {
+      "feature": "forum_posts_per_course",
+      "label_ru": "Сообщения форума на дисциплину",
+      "importance": 0.0,
+      "risk_direction": -1
+    },
+    {
+      "feature": "submission_on_time_rate",
+      "label_ru": "Доля работ, сданных вовремя",
+      "importance": 0.0,
+      "risk_direction": -1
+    },
+    {
+      "feature": "avg_session_minutes",
+      "label_ru": "Средняя длительность активности, мин",
+      "importance": 0.0,
+      "risk_direction": -1
+    },
+    {
+      "feature": "low_midterm_share",
+      "label_ru": "Доля дисциплин с низким промежуточным баллом",
+      "importance": 0.0,
+      "risk_direction": 1
+    }
+  ]
+}

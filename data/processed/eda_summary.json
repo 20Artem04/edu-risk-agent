@@ -1,0 +1,243 @@
+{
+  "rows": 420,
+  "risk_rate": 0.3452,
+  "numeric_descriptive_statistics": {
+    "admission_score": {
+      "count": 420.0,
+      "mean": 68.3267,
+      "std": 12.4404,
+      "min": 35.0,
+      "25%": 60.7,
+      "50%": 68.5,
+      "75%": 76.5,
+      "max": 100.0
+    },
+    "previous_gpa": {
+      "count": 420.0,
+      "mean": 3.5028,
+      "std": 0.5932,
+      "min": 2.0,
+      "25%": 3.0975,
+      "50%": 3.54,
+      "75%": 3.8625,
+      "max": 5.0
+    },
+    "attendance_rate": {
+      "count": 420.0,
+      "mean": 0.6418,
+      "std": 0.148,
+      "min": 0.2917,
+      "25%": 0.5278,
+      "50%": 0.625,
+      "75%": 0.75,
+      "max": 1.0
+    },
+    "late_rate": {
+      "count": 420.0,
+      "mean": 0.0769,
+      "std": 0.0353,
+      "min": 0.0,
+      "25%": 0.0556,
+      "50%": 0.0694,
+      "75%": 0.0972,
+      "max": 0.2222
+    },
+    "lms_events_per_course": {
+      "count": 420.0,
+      "mean": 17.531,
+      "std": 5.3367,
+      "min": 6.8333,
+      "25%": 13.1667,
+      "50%": 17.3333,
+      "75%": 21.3333,
+      "max": 36.3333
+    },
+    "active_days": {
+      "count": 420.0,
+      "mean": 59.9548,
+      "std": 10.313,
+      "min": 32.0,
+      "25%": 52.75,
+      "50%": 61.0,
+      "75%": 68.25,
+      "max": 81.0
+    },
+    "avg_session_minutes": {
+      "count": 420.0,
+      "mean": 10.5946,
+      "std": 1.4856,
+      "min": 5.7311,
+      "25%": 9.5712,
+      "50%": 10.5439,
+      "75%": 11.6375,
+      "max": 15.2935
+    },
+    "submission_on_time_rate": {
+      "count": 420.0,
+      "mean": 0.6189,
+      "std": 0.1696,
+      "min": 0.0,
+      "25%": 0.5,
+      "50%": 0.6316,
+      "75%": 0.7368,
+      "max": 1.0
+    },
+    "quiz_attempts_per_course": {
+      "count": 420.0,
+      "mean": 3.1556,
+      "std": 1.1964,
+      "min": 0.6667,
+      "25%": 2.3333,
+      "50%": 3.0833,
+      "75%": 4.0,
+      "max": 7.5
+    },
+    "forum_posts_per_course": {
+      "count": 420.0,
+      "mean": 1.044,
+      "std": 0.4981,
+      "min": 0.0,
+      "25%": 0.6667,
+      "50%": 1.0,
+      "75%": 1.3333,
+      "max": 3.1667
+    },
+    "midterm_avg": {
+      "count": 420.0,
+      "mean": 62.2049,
+      "std": 17.9438,
+      "min": 6.1667,
+      "25%": 50.4708,
+      "50%": 62.2833,
+      "75%": 74.1125,
+      "max": 100.0
+    },
+    "assignment_avg": {
+      "count": 420.0,
+      "mean": 70.0669,
+      "std": 14.997,
+      "min": 25.6833,
+      "25%": 60.3125,
+      "50%": 70.4917,
+      "75%": 80.2125,
+      "max": 100.0
+    },
+    "attempts_avg": {
+      "count": 420.0,
+      "mean": 1.7345,
+      "std": 0.6899,
+      "min": 1.0,
+      "25%": 1.1667,
+      "50%": 1.5,
+      "75%": 2.1667,
+      "max": 3.5
+    },
+    "low_midterm_share": {
+      "count": 420.0,
+      "mean": 0.269,
+      "std": 0.3513,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.5,
+      "max": 1.0
+    }
+  },
+  "group_risk": [
+    {
+      "group_name": "ПИ-402",
+      "count": 60,
+      "sum": 15,
+      "mean": 0.25
+    },
+    {
+      "group_name": "ПИ-406",
+      "count": 60,
+      "sum": 20,
+      "mean": 0.3333
+    },
+    {
+      "group_name": "ПИ-405",
+      "count": 60,
+      "sum": 21,
+      "mean": 0.35
+    },
+    {
+      "group_name": "ПИ-403",
+      "count": 60,
+      "sum": 21,
+      "mean": 0.35
+    },
+    {
+      "group_name": "ПИ-407",
+      "count": 60,
+      "sum": 22,
+      "mean": 0.3667
+    },
+    {
+      "group_name": "ПИ-401",
+      "count": 60,
+      "sum": 23,
+      "mean": 0.3833
+    },
+    {
+      "group_name": "ПИ-404",
+      "count": 60,
+      "sum": 23,
+      "mean": 0.3833
+    }
+  ],
+  "top_target_correlations": [
+    {
+      "feature": "low_midterm_share",
+      "label_ru": "Доля дисциплин с низким промежуточным баллом",
+      "spearman_rho": 0.7902
+    },
+    {
+      "feature": "assignment_avg",
+      "label_ru": "Средний балл заданий",
+      "spearman_rho": -0.7734
+    },
+    {
+      "feature": "attempts_avg",
+      "label_ru": "Среднее число попыток сдачи",
+      "spearman_rho": 0.7732
+    },
+    {
+      "feature": "midterm_avg",
+      "label_ru": "Средний балл промежуточного контроля",
+      "spearman_rho": -0.7716
+    },
+    {
+      "feature": "previous_gpa",
+      "label_ru": "Средний балл прошлых семестров",
+      "spearman_rho": -0.734
+    },
+    {
+      "feature": "attendance_rate",
+      "label_ru": "Доля посещённых занятий",
+      "spearman_rho": -0.6751
+    },
+    {
+      "feature": "admission_score",
+      "label_ru": "Вступительный балл",
+      "spearman_rho": -0.5577
+    },
+    {
+      "feature": "lms_events_per_course",
+      "label_ru": "События LMS на дисциплину",
+      "spearman_rho": -0.496
+    }
+  ],
+  "figures": [
+    "confusion_matrix.png",
+    "correlation_heatmap.png",
+    "data_quality.png",
+    "feature_distributions.png",
+    "feature_importance.png",
+    "risk_by_group.png",
+    "risk_scatter.png",
+    "roc_curve.png",
+    "target_distribution.png"
+  ]
+}

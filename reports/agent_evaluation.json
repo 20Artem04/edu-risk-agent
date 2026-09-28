@@ -1,0 +1,155 @@
+{
+  "mode": "deterministic_no_llm",
+  "intent_cases": 23,
+  "intent_correct": 23,
+  "intent_accuracy": 1.0,
+  "route_results": [
+    {
+      "question": "Покажи общую сводку",
+      "expected": "overview",
+      "actual": "overview",
+      "correct": true
+    },
+    {
+      "question": "Что происходит в целом?",
+      "expected": "overview",
+      "actual": "overview",
+      "correct": true
+    },
+    {
+      "question": "Сколько студентов в системе?",
+      "expected": "overview",
+      "actual": "overview",
+      "correct": true
+    },
+    {
+      "question": "Какой риск у STU0001?",
+      "expected": "student_card",
+      "actual": "student_card",
+      "correct": true
+    },
+    {
+      "question": "Покажи карточку STU0310",
+      "expected": "student_card",
+      "actual": "student_card",
+      "correct": true
+    },
+    {
+      "question": "Что мне делать?",
+      "expected": "student_card",
+      "actual": "student_card",
+      "correct": true
+    },
+    {
+      "question": "Сводка по группе ПИ-401",
+      "expected": "group_summary",
+      "actual": "group_summary",
+      "correct": true
+    },
+    {
+      "question": "Показатели группы пи 402",
+      "expected": "group_summary",
+      "actual": "group_summary",
+      "correct": true
+    },
+    {
+      "question": "Риск группы ПИ–407",
+      "expected": "group_summary",
+      "actual": "group_summary",
+      "correct": true
+    },
+    {
+      "question": "Покажи список риска",
+      "expected": "high_risk",
+      "actual": "high_risk",
+      "correct": true
+    },
+    {
+      "question": "Топ 5 студентов с высоким риском",
+      "expected": "high_risk",
+      "actual": "high_risk",
+      "correct": true
+    },
+    {
+      "question": "Кто в риске?",
+      "expected": "high_risk",
+      "actual": "high_risk",
+      "correct": true
+    },
+    {
+      "question": "Какие дисциплины самые сложные?",
+      "expected": "course_analysis",
+      "actual": "course_analysis",
+      "correct": true
+    },
+    {
+      "question": "Покажи аналитику по курсам",
+      "expected": "course_analysis",
+      "actual": "course_analysis",
+      "correct": true
+    },
+    {
+      "question": "Что по предметам?",
+      "expected": "course_analysis",
+      "actual": "course_analysis",
+      "correct": true
+    },
+    {
+      "question": "Какое качество модели?",
+      "expected": "model_quality",
+      "actual": "model_quality",
+      "correct": true
+    },
+    {
+      "question": "Какой ROC-AUC?",
+      "expected": "model_quality",
+      "actual": "model_quality",
+      "correct": true
+    },
+    {
+      "question": "Покажи F1 и recall",
+      "expected": "model_quality",
+      "actual": "model_quality",
+      "correct": true
+    },
+    {
+      "question": "Как организована ранняя поддержка?",
+      "expected": "knowledge_search",
+      "actual": "knowledge_search",
+      "correct": true
+    },
+    {
+      "question": "Как интерпретировать вероятность риска?",
+      "expected": "knowledge_search",
+      "actual": "knowledge_search",
+      "correct": true
+    },
+    {
+      "question": "Какой алгоритм используется?",
+      "expected": "model_quality",
+      "actual": "model_quality",
+      "correct": true
+    },
+    {
+      "question": "Привет, что ты умеешь?",
+      "expected": "help",
+      "actual": "help",
+      "correct": true
+    },
+    {
+      "question": "Дай примеры вопросов",
+      "expected": "help",
+      "actual": "help",
+      "correct": true
+    }
+  ],
+  "latency_requests": 60,
+  "successful_requests": 60,
+  "latency_ms": {
+    "mean": 6.266,
+    "median": 3.142,
+    "p95": 18.063,
+    "max": 22.915
+  },
+  "note": "Локальный замер на SQLite без сетевой LLM; задержка UI и холодный старт Streamlit не включены."
+}

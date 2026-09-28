@@ -1,0 +1,13 @@
+services:
+  academic-navigator:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      LLM_PROVIDER: ${LLM_PROVIDER:-none}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:3b}
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped
